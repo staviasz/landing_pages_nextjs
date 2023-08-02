@@ -1,0 +1,9 @@
+{
+  "__component": "section.section-content",
+  "title": "news coverage and some surprises",
+  "content": "<p>The release of Apple Silicon-based Macs at the end of last year.</p>",
+  "metadata": {
+    "background": false,
+    "section_id": "intro"
+  }
+}

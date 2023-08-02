@@ -1,0 +1,16 @@
+{
+  "__component": "section.section-two-columns",
+  "title": "January brings us Firefox 85",
+  "description": "To wrap up January",
+  "metadata": {
+    "background": true,
+    "section_id": "home"
+  },
+  "image": {
+    "data": {
+      "attributes": {
+        "url": "a.svg"
+      }
+    }
+  }
+}

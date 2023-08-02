@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GridText/> should render 1`] = `
+.c4 {
+  color: #0A1128;
+  font-size: 6.4rem;
+  text-transform: uppercase;
+  font-family: 'Montserrat',sans-serif;
+  font-style: italic;
+}
+
+.c9 {
+  color: #0A1128;
+  font-size: 3.2rem;
+  text-transform: lowercase;
+  font-family: 'Montserrat',sans-serif;
+  font-style: italic;
+}
+
+.c1 {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 3.2rem;
+}
+
+.c0 {
+  background: #FFFFFF;
+  color: #0A1128;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.c6 {
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+.c2 .c5 {
+  margin-bottom: 6.4rem;
+}
+
+.c7 {
+  counter-reset: grid-counter;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+  gap: 3.2rem;
+}
+
+.c8 .c3 {
+  position: relative;
+  left: 5rem;
+}
+
+.c8 .c3::before {
+  counter-increment: grid-counter;
+  content: counter(grid-counter);
+  position: absolute;
+  font-size: 7rem;
+  top: -3rem;
+  left: -5rem;
+  transform: rotate(5deg);
+}
+
+@media (max-width: 768px) {
+  .c4 {
+    font-size: 4.0rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .c7 {
+    grid-template-columns: 1fr;
+  }
+}
+
+<div>
+   
+  <div
+    background="false"
+    class="c0"
+    id="id"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <h2
+          class="c3 c4"
+          colordark="dark"
+          uppercase="uppercase"
+        >
+          My grid
+        </h2>
+        <p
+          class="c5 c6"
+        >
+          Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde
+        </p>
+        <div
+          class="c7"
+        >
+          <div
+            class="c8"
+          >
+            <h3
+              class="c3 c9"
+              colordark="dark"
+              uppercase="lowercase"
+            >
+              Teste 1
+            </h3>
+            <p
+              class="c5 c6"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.
+            </p>
+          </div>
+          <div
+            class="c8"
+          >
+            <h3
+              class="c3 c9"
+              colordark="dark"
+              uppercase="lowercase"
+            >
+              Teste 2
+            </h3>
+            <p
+              class="c5 c6"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.
+            </p>
+          </div>
+          <div
+            class="c8"
+          >
+            <h3
+              class="c3 c9"
+              colordark="dark"
+              uppercase="lowercase"
+            >
+              Teste 3
+            </h3>
+            <p
+              class="c5 c6"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+</div>
+`;

@@ -1,0 +1,17 @@
+[
+  {
+    "footer_text": "footer_text",
+    "title": "title",
+    "slug": "slug",
+    "sections": [
+      {
+        "section1": "section1",
+        "section2": "section2"
+      }
+    ],
+    "menu": {
+      "menu1": "menu1",
+      "menu2": "menu2"
+    }
+  }
+]
