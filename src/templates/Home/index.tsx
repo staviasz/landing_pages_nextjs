@@ -10,53 +10,6 @@ interface IndexProps {
 }
 
 export default function Home({ data }: IndexProps) {
-  // const [dataPage, setDataPage] = useState<DataProps>();
-  // const [isLoading, setisLoading] = useState<boolean>(true);
-  // const location = useLocation();
-  // const isMounted = useRef(true);
-
-  // useEffect(() => {
-  //   const pathName = location.pathname.replace(/[^a-z0-9-_]/gi, '-');
-  //   const slug = pathName ? pathName : 'landing-page';
-  //   const load = async () => {
-  //     try {
-  //       const data = await fetch(
-  //         `http://localhost:1337/api/pages/?slug=${slug}&populate=deep`,
-  //       );
-  //       const json = await data.json();
-  //       const { attributes } = json.data[0];
-  //       const pageData = mapData([attributes]);
-  //       setDataPage(() => pageData[0]);
-  //     } catch (e) {
-  //       setDataPage(undefined);
-  //     } finally {
-  //       setisLoading(false);
-  //     }
-  //   };
-  //   if (isMounted.current === true) {
-  //     load();
-  //   }
-
-  //   return () => {
-  //     isMounted.current = false;
-  //   };
-  // }, [location]);
-
-  // useEffect(() => {
-  //   if (dataPage === undefined && isLoading === true) {
-  //     document.title = 'Carregando...';
-  //   } else if (dataPage === undefined && isLoading === false) {
-  //     document.title = 'Pagina não encontrada';
-  //   } else {
-  //     if (dataPage) {
-  //       document.title = `Erick - ${dataPage.slug}`;
-  //     }
-  //   }
-  // }, [isLoading, dataPage]);
-
-  // if (isLoading === true) {
-  //   return <Loading />;
-  // }
   if (!data) {
     return <h1>No data</h1>;
   }
@@ -73,7 +26,6 @@ export default function Home({ data }: IndexProps) {
       {sections.map((section, index) => {
         const { component } = section;
         const key = `${slug}-${index}`;
-        console.log(section);
 
         if (component === 'section.section-two-coluns') {
           return <GridTwoColumn key={key} {...section} />;
@@ -90,7 +42,6 @@ export default function Home({ data }: IndexProps) {
 
         if (component === 'section.section-grid-image') {
           const { gridImage } = section;
-          console.log(gridImage);
 
           return <GridGalery key={key} grid={gridImage} {...section} />;
         }

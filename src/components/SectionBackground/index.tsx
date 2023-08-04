@@ -18,7 +18,7 @@ export const SectionBackground = ({
   const backgroundColor = background ? 'true' : 'false';
   const id = sectionId ? sectionId : random();
   return (
-    <Container background={backgroundColor} id={id}>
+    <Container $background={backgroundColor} id={id}>
       <SectionContainer>{children}</SectionContainer>
     </Container>
   );

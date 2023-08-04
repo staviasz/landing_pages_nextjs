@@ -16,7 +16,7 @@ export const Heading = ({
   uppercase = 'lowercase',
 }: HeadingProps) => {
   return (
-    <Title colordark={colordark} as={as} size={size} uppercase={uppercase}>
+    <Title $colordark={colordark} as={as} size={size} $uppercase={uppercase}>
       {children}
     </Title>
   );

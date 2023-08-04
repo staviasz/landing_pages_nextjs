@@ -1,3 +1,4 @@
+import { randomKey } from '@/utils/randomKey';
 import { Heading } from '../Heading';
 import { SectionBackground } from '../SectionBackground';
 import { TextContent } from '../Text';
@@ -37,7 +38,7 @@ export const GridGalery = ({
         <TextContent>{description}</TextContent>
         <Grid>
           {grid.map((el) => (
-            <GridElement key={el.srcImage}>
+            <GridElement key={randomKey(title)}>
               <Image src={el.srcImage} alt={el.altText} />
             </GridElement>
           ))}

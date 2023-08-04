@@ -1,3 +1,4 @@
+import { randomKey } from '@/utils/randomKey';
 import { Heading } from '../Heading';
 import { SectionBackground } from '../SectionBackground';
 import { TextContent } from '../Text';
@@ -37,7 +38,7 @@ export const GridText = ({
         <TextContent>{description}</TextContent>
         <Grid>
           {grid.map((el) => (
-            <GridElement key={el.title}>
+            <GridElement key={randomKey(title)}>
               <Heading
                 as="h3"
                 size="medium"

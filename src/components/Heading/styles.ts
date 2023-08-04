@@ -2,9 +2,9 @@ import styled, { css } from 'styled-components';
 import { Theme } from '../../styles/theme';
 
 interface TitleProps {
-  colordark: string;
+  $colordark: string;
   size: string;
-  uppercase: string;
+  $uppercase: string;
 }
 
 interface TitleSize {
@@ -34,12 +34,12 @@ const titleSize: TitleSize = {
 };
 
 export const Title = styled.h1<TitleProps>`
-  ${({ theme, colordark, size, uppercase }) => css`
-    color: ${colordark === 'dark'
+  ${({ theme, $colordark, size, $uppercase }) => css`
+    color: ${$colordark === 'dark'
       ? theme.colors.primaryColor
       : theme.colors.white};
     ${titleSize[size](theme)}
-    text-transform: ${uppercase};
+    text-transform: ${$uppercase};
     font-family: ${theme.font.family.secondary};
     font-style: italic;
   `}

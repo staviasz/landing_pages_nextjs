@@ -12,12 +12,12 @@ interface MenuProps extends NavLinkProps {
 }
 
 export const Menu = ({ links = [], logoData }: MenuProps) => {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState<boolean>(false);
 
   return (
     <>
       <Button
-        visible={visible}
+        $visible={visible}
         onClick={() => setVisible(true)}
         aria-label="Open/Close menu"
       >
@@ -27,7 +27,7 @@ export const Menu = ({ links = [], logoData }: MenuProps) => {
           <MenuIcon aria-label="Open menu" />
         )}
       </Button>
-      <Container visible={visible} onClick={() => setVisible(false)}>
+      <Container $visible={visible} onClick={() => setVisible(false)}>
         <SectionContainer>
           <MenuContainer>
             <LogoLink {...logoData} />
