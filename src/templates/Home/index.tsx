@@ -1,67 +1,67 @@
-import { useEffect, useRef, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import { DataProps, mapData } from '../../Api/map-data';
+import { DataProps } from '../..//Api/map-data';
 import { GridContent } from '../../components/GridContent';
 import { GridGalery } from '../../components/GridGalery';
 import { GridText } from '../../components/GridText';
 import { GridTwoColumn } from '../../components/GridTwoColumns';
-import { Loading } from '../../components/Loading';
 import { Base } from '../base';
 
+interface IndexProps {
+  data?: DataProps;
+}
 
-export default function Home() {
-  const [dataPage, setDataPage] = useState<DataProps>();
-  const [isLoading, setisLoading] = useState<boolean>(true);
-  const location = useLocation();
-  const isMounted = useRef(true);
+export default function Home({ data }: IndexProps) {
+  // const [dataPage, setDataPage] = useState<DataProps>();
+  // const [isLoading, setisLoading] = useState<boolean>(true);
+  // const location = useLocation();
+  // const isMounted = useRef(true);
 
-  useEffect(() => {
-    const pathName = location.pathname.replace(/[^a-z0-9-_]/gi, '-');
-    const slug = pathName ? pathName : 'landing-page';
-    const load = async () => {
-      try {
-        const data = await fetch(
-          `http://localhost:1337/api/pages/?slug=${slug}&populate=deep`,
-        );
-        const json = await data.json();
-        const { attributes } = json.data[0];
-        const pageData = mapData([attributes]);
-        setDataPage(() => pageData[0]);
-      } catch (e) {
-        setDataPage(undefined);
-      } finally {
-        setisLoading(false);
-      }
-    };
-    if (isMounted.current === true) {
-      load();
-    }
+  // useEffect(() => {
+  //   const pathName = location.pathname.replace(/[^a-z0-9-_]/gi, '-');
+  //   const slug = pathName ? pathName : 'landing-page';
+  //   const load = async () => {
+  //     try {
+  //       const data = await fetch(
+  //         `http://localhost:1337/api/pages/?slug=${slug}&populate=deep`,
+  //       );
+  //       const json = await data.json();
+  //       const { attributes } = json.data[0];
+  //       const pageData = mapData([attributes]);
+  //       setDataPage(() => pageData[0]);
+  //     } catch (e) {
+  //       setDataPage(undefined);
+  //     } finally {
+  //       setisLoading(false);
+  //     }
+  //   };
+  //   if (isMounted.current === true) {
+  //     load();
+  //   }
 
-    return () => {
-      isMounted.current = false;
-    };
-  }, [location]);
+  //   return () => {
+  //     isMounted.current = false;
+  //   };
+  // }, [location]);
 
-  useEffect(() => {
-    if (dataPage === undefined && isLoading === true) {
-      document.title = 'Carregando...';
-    } else if (dataPage === undefined && isLoading === false) {
-      document.title = 'Pagina não encontrada';
-    } else {
-      if (dataPage) {
-        document.title = `Erick - ${dataPage.slug}`;
-      }
-    }
-  }, [isLoading, dataPage]);
+  // useEffect(() => {
+  //   if (dataPage === undefined && isLoading === true) {
+  //     document.title = 'Carregando...';
+  //   } else if (dataPage === undefined && isLoading === false) {
+  //     document.title = 'Pagina não encontrada';
+  //   } else {
+  //     if (dataPage) {
+  //       document.title = `Erick - ${dataPage.slug}`;
+  //     }
+  //   }
+  // }, [isLoading, dataPage]);
 
-  if (isLoading === true) {
-    return <Loading />;
-  }
-  if (dataPage === undefined) {
+  // if (isLoading === true) {
+  //   return <Loading />;
+  // }
+  if (!data) {
     return <h1>No data</h1>;
   }
 
-  const { menu, sections, footerHtml, slug } = dataPage;
+  const { menu, sections, footerHtml, slug } = data;
   const { links, text, link, srcImage } = menu;
 
   return (

@@ -1,17 +1,21 @@
 [
   {
-    "footer_text": "footer_text",
-    "title": "title",
-    "slug": "slug",
-    "sections": [
-      {
-        "section1": "section1",
-        "section2": "section2"
+    "id": 1,
+    "attributes": {
+
+      "title": "title",
+      "footer_text": "footer_text",
+      "slug": "slug",
+      "sections": [
+        {
+          "section1": "section1",
+          "section2": "section2"
+        }
+      ],
+      "menu": {
+        "menu1": "menu1",
+        "menu2": "menu2"
       }
-    ],
-    "menu": {
-      "menu1": "menu1",
-      "menu2": "menu2"
     }
   }
 ]
