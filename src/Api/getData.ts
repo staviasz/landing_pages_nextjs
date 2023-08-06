@@ -10,9 +10,3 @@ export const getData = async () => {
 
   return pageData;
 };
-
-// export const getStaticProps = async () => {
-//   return {
-//     props:data[0]
-//   }
-// }

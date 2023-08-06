@@ -2,7 +2,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { loadPages } from '@/Api/load-pages';
 import { DataProps } from '@/Api/map-data';
+import { Loading } from '@/components/Loading';
 import Home from '@/templates/Home';
+import { useRouter } from 'next/router';
 
 interface HomeProps {
   data: DataProps;
@@ -40,6 +42,7 @@ export const getStaticProps = async (ctx: any) => {
     props: {
       data,
     },
+    revalidate: 600,
   };
 };
 
@@ -48,5 +51,9 @@ interface IndexProps {
 }
 
 export default function Page({ data }: IndexProps) {
+  const router = useRouter();
+  if (router.isFallback) {
+    return <Loading />;
+  }
   return <Home data={data} />;
 }

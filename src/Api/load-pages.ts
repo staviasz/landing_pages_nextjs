@@ -1,17 +1,18 @@
+import { url } from '../config/url-config';
 import { mapData } from './map-data';
 
 export const loadPages = async (id?: number) => {
   if (!id) {
-    const url = `http://localhost:1337/api/pages/?populate=deep`;
-    const raw = await fetch(url);
+    const urlReq = `${url}/pages/?populate=deep`;
+    const raw = await fetch(urlReq);
     const json = await raw.json();
     const data = mapData(json.data);
 
     return data;
   }
-  const url = `http://localhost:1337/api/pages/${id}?&populate=deep`;
+  const urlReq = `${url}/pages/${id}?&populate=deep`;
 
-  const raw = await fetch(url);
+  const raw = await fetch(urlReq);
   const json = await raw.json();
   const data = mapData([json.data]);
 

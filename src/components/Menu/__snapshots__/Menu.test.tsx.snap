@@ -44,9 +44,9 @@ exports[`<Menu /> should not render links 1`] = `
   left: 0;
   right: 0;
   width: 100%;
-  border-bottom: #DDDDDD;
   background: #FFFFFF;
   transition: all 300ms ease-in-out;
+  border-bottom: #DDDDDD;
 }
 
 .c2 >.c3 {
@@ -161,8 +161,6 @@ exports[`<Menu /> should not render links 1`] = `
       >
         <h1
           class="c6 c7"
-          colordark="dark"
-          uppercase="uppercase"
         >
           <a
             class="c8"
@@ -254,9 +252,9 @@ exports[`<Menu /> should render Logo and Main Menu Nav 1`] = `
   left: 0;
   right: 0;
   width: 100%;
-  border-bottom: #DDDDDD;
   background: #FFFFFF;
   transition: all 300ms ease-in-out;
+  border-bottom: #DDDDDD;
 }
 
 .c2 >.c3 {
@@ -371,8 +369,6 @@ exports[`<Menu /> should render Logo and Main Menu Nav 1`] = `
       >
         <h1
           class="c6 c7"
-          colordark="dark"
-          uppercase="uppercase"
         >
           <a
             class="c8"
