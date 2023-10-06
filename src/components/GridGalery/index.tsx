@@ -29,7 +29,7 @@ export const GridGalery = ({
       <Container>
         <Heading
           as="h2"
-          size="xhuge"
+          size="big"
           uppercase="uppercase"
           colordark={background ? 'light' : 'dark'}
         >

@@ -23,6 +23,7 @@ export const GridContent = ({
           as="h2"
           uppercase="uppercase"
           colordark={background ? 'light' : 'dark'}
+          size={'big'}
         >
           {title}
         </Heading>

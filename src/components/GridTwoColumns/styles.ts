@@ -36,5 +36,6 @@ export const Image = styled.img`
   ${() => css`
     max-width: 500px;
     width: 100%;
+    border-radius: 8px;
   `}
 `;
